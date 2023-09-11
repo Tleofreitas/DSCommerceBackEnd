@@ -46,9 +46,15 @@ public class ProductController {
         return ResponseEntity.created(uri).body(dto); // Retornar Status 201 Created
     }
 
-    @PutMapping(value = "/{id}") // Retorno da consulta
+    @PutMapping(value = "/{id}")
     public ResponseEntity<ProductDTO> update(@PathVariable Long id, @RequestBody ProductDTO dto) {
-        dto = service.update(id, dto); // Chamar o serviço de atualização com o Id passado
+        dto = service.update(id, dto); // Chamar o serviço de atualização com o Id passado e as infos de atualização
         return ResponseEntity.ok(dto); // Retornar Status 200
+    }
+
+    @DeleteMapping(value = "/{id}")
+    public ResponseEntity<Void> delete(@PathVariable Long id) {
+        service.delete(id); // Chamar o serviço de deletar com o Id passado
+        return ResponseEntity.noContent().build(); // Retornar Status 204 = Sem retorno
     }
 }

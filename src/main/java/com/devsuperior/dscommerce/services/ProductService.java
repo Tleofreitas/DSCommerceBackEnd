@@ -71,4 +71,10 @@ public class ProductService {
         // Retornar como DTO
         return new ProductDTO(entity);
     }
+
+    @Transactional
+    public void delete(Long id) {
+        // Buscar no banco de dados o Id e deletar
+        repository.deleteById(id);
+    }
 }
