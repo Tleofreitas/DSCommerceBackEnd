@@ -4,9 +4,12 @@ import com.devsuperior.dscommerce.dto.ProductDTO;
 import com.devsuperior.dscommerce.entities.Product;
 import com.devsuperior.dscommerce.repositories.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.Optional;
 
 // Arquitetura por padrão de camadas
@@ -24,6 +27,15 @@ public class ProductService {
 
         // Converter o Product para ProductDTO e retornar para o controlador
         return new ProductDTO(product);
+    }
+
+    @Transactional(readOnly = true)
+    public Page<ProductDTO> findAll(Pageable pageable) {
+        // Buscar no banco de dados a lista de Produtos | Pageable = Listagem paginada
+        Page<Product> result = repository.findAll(pageable);
+
+        // Converter a lista de  Product para ProductDTO e retornar para o controlador
+        return result.map(x -> new ProductDTO(x));
     }
 
 }
