@@ -39,10 +39,16 @@ public class ProductController {
     @PostMapping
     public ResponseEntity<ProductDTO> insert(@RequestBody ProductDTO dto) {
         // @RequestBody = Corpo da requisição
-        dto = service.insert(dto);
+        dto = service.insert(dto); // Chamar o serviço de inserção e passar os dados
         // URI = link do recurso criado | Boa prática
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
                 .buildAndExpand(dto.getId()).toUri();
         return ResponseEntity.created(uri).body(dto); // Retornar Status 201 Created
+    }
+
+    @PutMapping(value = "/{id}") // Retorno da consulta
+    public ResponseEntity<ProductDTO> update(@PathVariable Long id, @RequestBody ProductDTO dto) {
+        dto = service.update(id, dto); // Chamar o serviço de atualização com o Id passado
+        return ResponseEntity.ok(dto); // Retornar Status 200
     }
 }

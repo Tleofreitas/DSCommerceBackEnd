@@ -35,17 +35,40 @@ public class ProductService {
         return result.map(x -> new ProductDTO(x));
     }
 
-    @Transactional
-    public ProductDTO insert(ProductDTO dto) {
-        // Instanciar um Product e copiar os dados do dto para a entidade
-        Product entity = new Product();
+    private void copyDtoToEntity(ProductDTO dto, Product entity) {
         entity.setName(dto.getName());
         entity.setDescription(dto.getDescription());
         entity.setPrice(dto.getPrice());
         entity.setImgUrl(dto.getImgUrl());
+    }
 
+    @Transactional
+    public ProductDTO insert(ProductDTO dto) {
+        // Instanciar um Product
+        Product entity = new Product();
+
+        // Copiar os dados do dto para a entidade
+        copyDtoToEntity(dto, entity);
+
+        // Salvar no banco de dados
         entity = repository.save(entity);
+
+        // Retornar como DTO
         return new ProductDTO(entity);
     }
 
+    @Transactional
+    public ProductDTO update(Long id, ProductDTO dto) {
+        // Instanciar um Product com a referência do Id
+        Product entity = repository.getReferenceById(id);
+
+        // Copiar os dados do dto para a entidade
+        copyDtoToEntity(dto, entity);
+
+        // Salvar no banco de dados
+        entity = repository.save(entity);
+
+        // Retornar como DTO
+        return new ProductDTO(entity);
+    }
 }
