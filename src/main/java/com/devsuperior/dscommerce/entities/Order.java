@@ -27,6 +27,7 @@ public class Order {
     @OneToOne(mappedBy = "order", cascade = CascadeType.ALL)
     private Payment payment;
 
+    // Acessar os Itens
     @OneToMany(mappedBy = "id.order")
     private Set<OrderItem> items = new HashSet<>();
 
@@ -85,7 +86,7 @@ public class Order {
         return items;
     }
 
-    // Pegar os Produtos dos associados ao Pedido (Order)
+    // Pegar os Produtos associados ao Pedido (Order)
     public List<Product> getProducts() {
         return items.stream().map(x -> x.getProduct()).toList();
     }

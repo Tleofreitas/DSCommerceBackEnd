@@ -29,6 +29,7 @@ public class Product {
      *  usa-se Set e Hash Set ao invés de List */
     private Set<Category> categories = new HashSet<>();
 
+    // Acessar os Itens
     @OneToMany(mappedBy = "id.product")
     private Set<OrderItem> items =new HashSet<>();
 
