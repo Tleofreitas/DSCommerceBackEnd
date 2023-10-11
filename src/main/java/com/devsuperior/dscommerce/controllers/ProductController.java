@@ -2,6 +2,7 @@ package com.devsuperior.dscommerce.controllers;
 
 import com.devsuperior.dscommerce.dto.ProductDTO;
 import com.devsuperior.dscommerce.services.ProductService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -37,7 +38,9 @@ public class ProductController {
 
     // Adicionar um produto
     @PostMapping
-    public ResponseEntity<ProductDTO> insert(@RequestBody ProductDTO dto) {
+    public ResponseEntity<ProductDTO> insert
+        (@Valid /* Para checar as validações inseridas no DTO*/
+         @RequestBody ProductDTO dto) {
         // @RequestBody = Corpo da requisição
         dto = service.insert(dto); // Chamar o serviço de inserção e passar os dados
         // URI = link do recurso criado | Boa prática
@@ -47,7 +50,7 @@ public class ProductController {
     }
 
     @PutMapping(value = "/{id}")
-    public ResponseEntity<ProductDTO> update(@PathVariable Long id, @RequestBody ProductDTO dto) {
+    public ResponseEntity<ProductDTO> update(@PathVariable Long id, @Valid @RequestBody ProductDTO dto) {
         dto = service.update(id, dto); // Chamar o serviço de atualização com o Id passado e as infos de atualização
         return ResponseEntity.ok(dto); // Retornar Status 200
     }
