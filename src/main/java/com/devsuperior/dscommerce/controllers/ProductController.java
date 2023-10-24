@@ -30,9 +30,11 @@ public class ProductController {
 
     // Buscar todos os produtos de forma paginada
     @GetMapping
-    public ResponseEntity<Page<ProductDTO>> findAll(Pageable pageable) {
+    public ResponseEntity<Page<ProductDTO>> findAll(
+            @RequestParam(name = "name", defaultValue = "") String name,
+            Pageable pageable) {
         // Pageable = Listagem paginada
-        Page<ProductDTO> dto = service.findAll(pageable);
+        Page<ProductDTO> dto = service.findAll(name, pageable);
         return ResponseEntity.ok(dto); // Retornar Status 200
     }
 

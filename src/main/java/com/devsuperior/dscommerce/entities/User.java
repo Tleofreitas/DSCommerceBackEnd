@@ -3,9 +3,7 @@ package com.devsuperior.dscommerce.entities;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 // Mapeamento do JPA
 @Entity
@@ -24,6 +22,13 @@ public class User {
     // Relacionamento UM para MUITOS com Order
     @OneToMany(mappedBy = "client")
     private List<Order> orders = new ArrayList<>();
+
+    // Relacionamento MUITOS para MUITOS com Role
+    @ManyToMany
+    @JoinTable(name = "tb_user_role",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id"))
+    private Set<Role> roles = new HashSet<>();
 
     public User() {
     }
@@ -87,6 +92,25 @@ public class User {
 
     public List<Order> getOrders() {
         return orders;
+    }
+
+    public Set<Role> getRoles() {
+        return roles;
+    }
+
+    // Adicionar permissão
+    public void addRole(Role role) {
+        roles.add(role);
+    }
+
+    // Verificar se possui permissão
+    public boolean hasRole(String roleName){
+        for (Role roles : roles) {
+            if(roles.getAuthority().equals(roleName)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override

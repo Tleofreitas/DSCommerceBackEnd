@@ -34,9 +34,9 @@ public class ProductService {
     }
 
     @Transactional(readOnly = true)
-    public Page<ProductDTO> findAll(Pageable pageable) {
+    public Page<ProductDTO> findAll(String name, Pageable pageable) {
         // Buscar no banco de dados a lista de Produtos | Pageable = Listagem paginada
-        Page<Product> result = repository.findAll(pageable);
+        Page<Product> result = repository.searchByName(name, pageable);
 
         // Converter a lista de  Product para ProductDTO e retornar para o controlador
         return result.map(x -> new ProductDTO(x));
