@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
@@ -39,6 +40,7 @@ public class ProductController {
     }
 
     // Adicionar um produto
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
     @PostMapping
     public ResponseEntity<ProductDTO> insert
         (@Valid /* Para checar as validações inseridas no DTO*/
@@ -51,12 +53,16 @@ public class ProductController {
         return ResponseEntity.created(uri).body(dto); // Retornar Status 201 Created
     }
 
+    // Atualizar um produto
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
     @PutMapping(value = "/{id}")
     public ResponseEntity<ProductDTO> update(@PathVariable Long id, @Valid @RequestBody ProductDTO dto) {
         dto = service.update(id, dto); // Chamar o serviço de atualização com o Id passado e as infos de atualização
         return ResponseEntity.ok(dto); // Retornar Status 200
     }
 
+    // Deletar um produto
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
     @DeleteMapping(value = "/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {
         service.delete(id); // Chamar o serviço de deletar com o Id passado
