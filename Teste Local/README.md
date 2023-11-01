@@ -1,11 +1,6 @@
-# Projeto Modelo de domínio e ORM
-## Desafio proposto
-Você deve criar um projeto no Spring Boot com Java e banco de dados H2, e implementar o modelo conceitual conforme 
-especificação a seguir. 
-![image](https://github.com/Tleofreitas/Mod8_SistemaDeEvento/assets/88738577/9874c497-274b-4017-967b-b856a5001f28)
-
-Além disso, você deve fazer o seeding da base de dados conforme diagrama de objetos que segue.
-![image](https://github.com/Tleofreitas/Mod8_SistemaDeEvento/assets/88738577/c34436ee-a158-4034-a7fb-a91082490924)
+# Projeto Spring Boot Estruturado
+## Requisitos do sistema
+[Ver os requisitos](https://drive.google.com/file/d/1ivKMjxW6ahfjkC7AFFm8VukYBLvfIkM0/view)
 
 ---
 ## *Pré-requisitos para testes locais* 
@@ -43,7 +38,7 @@ Clique com o botão direito sobre o arquivo e selecione Extrair Tudo.
 
 ![image](https://github.com/Tleofreitas/Mod8_SistemaDeEvento/assets/88738577/03075095-3752-4ce1-83aa-dfda9e738466)
 
-As informações foram extraídas para a pasta Mod8_SistemaDeEvento-main.
+As informações foram extraídas para a pasta DSCommerceBackEnd-main.
 
 ### 2.2) Extrair arquivos com Winrar
 Clique com o botão direito sobre o arquivo e selecione Extrair Aqui (Extract Here).
@@ -51,7 +46,7 @@ Clique com o botão direito sobre o arquivo e selecione Extrair Aqui (Extract He
 
 ![image](https://github.com/Tleofreitas/Mod8_SistemaDeEvento/assets/88738577/6331c260-b1a5-4fc6-84e8-a383a8dadcf3)
 
-As informações foram extraídas para a pasta Mod8_SistemaDeEvento-main.
+As informações foram extraídas para a pasta DSCommerceBackEnd-main.
 
 ### 3) Abrir Projeto
 ### 3.1) Abrir projeto com STS
@@ -67,7 +62,7 @@ Selecione a pasta onde você salvou o projeto, Finish
 Aguarde a importação do projeto (acompanhe a barra de carregamento no canto inferior direito).
 
 ### 3.2) Abrir projeto com IntelliJ
-Clique em Open, selecione a pasta onde você salvou o projeto, Ok...
+Clique em Open, selecione a pasta onde você salvou o projeto, dentro da pasta do projeto selecione BackEnd, Ok...
 <br></br>
 
 ![image](https://github.com/Tleofreitas/Mod8_SistemaDeEvento/assets/88738577/42c768dd-e2d0-4b83-aeb2-9f0d1b74cf00)
@@ -80,7 +75,7 @@ Aguarde a importação do projeto (acompanhe a barra de carregamento no canto in
 
 ### 4) Executar o Projeto
 ### 4.1) Executar projeto com STS
-No menu Boot Dashboard, clique com botão direito em sistemaDeEvento, (Re)start e aguarde o programa ser iniciado...
+No menu Boot Dashboard, clique com botão direito em dscommerce, (Re)start e aguarde o programa ser iniciado...
 
 ![image](https://github.com/Tleofreitas/Mod8_SistemaDeEvento/assets/88738577/32f2e54f-d599-421f-a3d7-996015c5f1e5)
 
@@ -93,7 +88,7 @@ No menu Console, pode-se ver o tempo de inicialização e a indicação de proce
 ![image](https://github.com/Tleofreitas/Mod8_SistemaDeEvento/assets/88738577/0cd3e4bf-6d7e-4704-8da3-3d94793d5cdd)
 
 ### 4.2) Executar projeto com IntelliJ
-Acesse Mod8_SistemaDeEvento-main > src > main > java > SistemaDeEventoApplication, clique com botão direito e clique em Run 'Sistema...' e aguarde o programa ser iniciado...
+Acesse DSCommerceBackEnd-main > src > main > java > DscommerceApplication, clique com botão direito e clique em Run 'Sistema...' e aguarde o programa ser iniciado...
 
 ![image](https://github.com/Tleofreitas/Mod8_SistemaDeEvento/assets/88738577/3394cfa6-2a32-48fa-9c44-186b998c255f)
 
@@ -148,11 +143,3 @@ Caso você não tenha o JDK instalado, siga com o passo <i><b>Pré-requisitos pa
 ### Abrir o projeto
 Após os arquivos serem carregados, pode acontecer de aparecer um X ou um ! vermelho. Caso isso ocorra, tente as soluções deste
 tutorial: https://www.youtube.com/watch?v=Je4JWWJcyo0
-
----
-## *Dúvidas? Contate-me*
-Me envie uma mensagem no [WhatsApp](https://api.whatsapp.com/send?phone=5511951221949)
-
----
-## *Contribuintes* 🔥👊
-Este projeto foi desenvolvido durante o curso Formação Desenvolvedor Moderno da escola [DevSuperior](https://devsuperior.com.br), sobe orientação do tutor [Nelio Alves](https://www.linkedin.com/in/nelio-alves/?originalSubdomain=br).
