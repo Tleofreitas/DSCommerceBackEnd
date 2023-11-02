@@ -27,7 +27,7 @@ Caso você não tenha instalado e configurado em sua máquina, instale da seguin
 
 Nesta página, clique no botão Code, depois em Download ZIP e salve o arquivo.
 
-![image](https://github.com/Tleofreitas/Mod8_SistemaDeEvento/assets/88738577/193577b7-e1a8-4b2c-a80c-b6363a6bed12)
+![image](https://github.com/Tleofreitas/DSCommerceBackEnd/assets/88738577/386584fa-f7f6-4f41-a809-af26f034654c)
 
 Extrair arquivos: Abra a pasta onde o arquivo foi salvo.
 
@@ -57,7 +57,7 @@ Clique em File, Import, Maven, Existing Maven Projects, Next...
 
 Selecione a pasta onde você salvou o projeto, Finish
 <br></br>
-![image](https://github.com/Tleofreitas/Mod8_SistemaDeEvento/assets/88738577/94f03e9f-7468-432a-bfc4-c063ba5d2661)
+![image](https://github.com/Tleofreitas/DSCommerceBackEnd/assets/88738577/cc26f87f-0baa-4fc8-97b0-a41ac7b50cee)
 
 Aguarde a importação do projeto (acompanhe a barra de carregamento no canto inferior direito).
 
@@ -65,7 +65,7 @@ Aguarde a importação do projeto (acompanhe a barra de carregamento no canto in
 Clique em Open, selecione a pasta onde você salvou o projeto, dentro da pasta do projeto selecione BackEnd, Ok...
 <br></br>
 
-![image](https://github.com/Tleofreitas/Mod8_SistemaDeEvento/assets/88738577/42c768dd-e2d0-4b83-aeb2-9f0d1b74cf00)
+![image](https://github.com/Tleofreitas/DSCommerceBackEnd/assets/88738577/c26f16b5-4d1d-4866-92b6-dd9063b8ea31)
 
 Caso apareça a tela abaixo, selecione Maven Project...
 
@@ -88,9 +88,9 @@ No menu Console, pode-se ver o tempo de inicialização e a indicação de proce
 ![image](https://github.com/Tleofreitas/Mod8_SistemaDeEvento/assets/88738577/0cd3e4bf-6d7e-4704-8da3-3d94793d5cdd)
 
 ### 4.2) Executar projeto com IntelliJ
-Acesse DSCommerceBackEnd-main > src > main > java > DscommerceApplication, clique com botão direito e clique em Run 'Sistema...' e aguarde o programa ser iniciado...
+Acesse BackEnd > src > main > java > DscommerceApplication, clique com botão direito e clique em Run e aguarde o programa ser iniciado...
 
-![image](https://github.com/Tleofreitas/Mod8_SistemaDeEvento/assets/88738577/3394cfa6-2a32-48fa-9c44-186b998c255f)
+![image](https://github.com/Tleofreitas/DSCommerceBackEnd/assets/88738577/9fb0741e-98e5-4545-a14c-8a36456d4964)
 
 No menu Run, pode-se ver o tempo de inicialização e a indicação de processo rodando...
 
@@ -110,22 +110,12 @@ Informações de acesso:
 ### Criação de tabelas
 As tabelas que foram criadas podem ser vistas no lado esquerdo conforme diagrama de clases
 
-![image](https://github.com/Tleofreitas/Mod8_SistemaDeEvento/assets/88738577/b1145b2d-2f3e-41ae-8196-12863cfe258c)
+![image](https://github.com/Tleofreitas/DSCommerceBackEnd/assets/88738577/3d9cd872-4cb2-4b74-85f0-ea160c32d4be)
 
 ### Seed de dados
 Para ver o seed de dados conforme diagrama de objetos, selecione a tabela e clique em Run. Para realizar outra pesquisa, limpe a consulta anterior com Clear. O retorno da consulta aparece logo abaixo.
 
-![image](https://github.com/Tleofreitas/Mod8_SistemaDeEvento/assets/88738577/8c06eef8-8649-4351-979e-40520ca12473)
-
-### Modelo de Domínio e ORM
-### Relacionamento Muitos para Muitos de Participante e Atividade
-![image](https://github.com/Tleofreitas/Mod8_SistemaDeEvento/assets/88738577/501c9c7d-5e04-4ce9-af4d-07f940044644)
-
-### Relacionamento Muitos para Um de Atividade e Categoria
-![image](https://github.com/Tleofreitas/Mod8_SistemaDeEvento/assets/88738577/16dd9f77-af3c-4365-b0dc-5da8f69ce434)
-
-### Relacionamento Um para Muitos Atividade e Bloco
-![image](https://github.com/Tleofreitas/Mod8_SistemaDeEvento/assets/88738577/e06b8fc2-f69a-420f-92a2-71f012ed7a93)
+![image](https://github.com/Tleofreitas/DSCommerceBackEnd/assets/88738577/7b0d7efb-d469-49ed-86da-317847b8017c)
 
 ---
 ## ⚠️ *Erros comuns* ⚠️
