@@ -117,6 +117,23 @@ Para ver o seed de dados conforme diagrama de objetos, selecione a tabela e cliq
 
 ![image](https://github.com/Tleofreitas/DSCommerceBackEnd/assets/88738577/7b0d7efb-d469-49ed-86da-317847b8017c)
 
+### 6) Postman 
+### 6.1) Importar Environments
+Clique em Import, depois em files...
+<br></br>
+![image](https://github.com/Tleofreitas/DSCommerceBackEnd/assets/88738577/24fd9ac7-6a91-45d6-8d47-cd31036820c4)
+
+Acesse a pasta do projeto (DSCommerceBackEnd-main), selecione o arquivo DSCommerceEnv.postman_environment.json e aguarde o processo de importação.
+
+Agora no canto direito é possível acessar as configurações:
+<br></br>
+![image](https://github.com/Tleofreitas/DSCommerceBackEnd/assets/88738577/15dd5005-aac9-4269-9982-33a93127ed3d)
+
+### 6.2) Importar Collection
+Clique em Import, depois em files, acesse a pasta do projeto (DSCommerceBackEnd-main), selecione o arquivo DSCommerceFinal.postman_collection.json e aguarde o processo de importação. Após a finalização é possível acessar as requisições:
+<br></br>
+![image](https://github.com/Tleofreitas/DSCommerceBackEnd/assets/88738577/a998b38f-24ca-4736-a073-1ec3cdd71a0c)
+
 ---
 ## ⚠️ *Erros comuns* ⚠️
 ### No passo Como Testar o Código>
@@ -129,7 +146,3 @@ Após o término da importação, pode ocorrer do IntelliJ não localizar o JDK,
 ![image](https://github.com/Tleofreitas/Mod8_SistemaDeEvento/assets/88738577/93b85b1c-8515-470f-bc40-b7ae460fbb24)
 
 Caso você não tenha o JDK instalado, siga com o passo <i><b>Pré-requisitos para testes locais - Java JDK</b></i>.
-
-### Abrir o projeto
-Após os arquivos serem carregados, pode acontecer de aparecer um X ou um ! vermelho. Caso isso ocorra, tente as soluções deste
-tutorial: https://www.youtube.com/watch?v=Je4JWWJcyo0
