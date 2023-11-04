@@ -16,8 +16,18 @@ Foi desenvolvido uma API Rest com Java e Spring. Tópicos que foram vistos até 
 - Perfis de projeto
 
 ---
+## 👨‍💻️ *Tecnologias Utilizadas*
+Esse projeto foi criado utilizando as tecnologias:
+- Java, Spring Boot, Bean Validation, JPA, Spring Security, OAuth2, JWT, Maven, H2 Database, Postman
+- Editor (IDE) IntelliJ
+
+---
 ### Realizando Testes
 Video tutorial aqui
+
+---
+### Teste local
+Veja o passo a passo aqui...
 
 ---
 ## *Dúvidas? Contate-me*
